@@ -19,7 +19,7 @@
   tasks: 
   - name: installing packages
     ansible.builtin.package:
-      msg: "{{ item }}"
+      name: "{{ item }}"
     loop:
     - mysql 
     - git 
