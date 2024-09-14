@@ -2,16 +2,16 @@
   hosts: local 
   connection: local 
   vars:
-    my_name: "maha lakshmi"
-    age: 25 
-    courses:
+    my_name: "maha lakshmi"  # string
+    age: 25 # number 
+    courses:  # list 
     - java 
     - sql 
     - selenium
     - testNG
     - devops 
-    live: true 
-    tools:
+    live: true # boolean
+    tools:   # dict 
      CM: ansible 
      CI: jenkins
      CD: docker 
