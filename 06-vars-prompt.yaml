@@ -1,9 +1,9 @@
 - name: variables fro prompt 
   hosts: web 
   vars_prompt:
-  - my_name: "maha lakshmi"
+  - name: my_name
     prompt: "enter your name: "
-  - address: "hyd"
+  - name: address
     prompt: "enter your address: "
   tasks: 
   - name: display variables from prompt 
