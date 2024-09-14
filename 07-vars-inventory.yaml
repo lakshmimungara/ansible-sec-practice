@@ -1,6 +1,6 @@
-- name: variables from files
+- name: variables from inventory
   hosts: web 
   tasks:
-  - name: variables from files 
+  - name: variables from inventory 
     ansible.builtin.debug:
        msg: "Hi, my name is {{ my_name }} and I am living in {{ address }}"
