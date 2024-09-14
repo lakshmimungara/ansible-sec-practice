@@ -9,9 +9,9 @@
       msg: "Hi, I am {{ my_name }} and I am currently living in {{ address }}"
     
   - name: display name and address- task-2   # variables represented by {{}}
-    ansible.builtin.debug:
     vars:
-    my_name: "vijay"
+      my_name: "vijay"
+    ansible.builtin.debug:
       msg: "Hi, I am {{ my_name }} and I am currently living in {{ address }}"
 
   - name: display name and address - task-3   # variables represented by {{}}
