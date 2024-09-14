@@ -30,3 +30,22 @@
       numbers: [17,45,7,8,234,17,45,7,8]
     ansible.builtin.debug:
      msg: "Min_number: {{ numbers | min }}, Max_number: {{ numbers | max }}"
+
+  - name: converting map to list 
+    vars: 
+      self_intro:
+        my_name: "chinni"
+        address: "hyd"
+        age: 25 
+    ansible.builtin.debug:
+     msg: "{{ self_intro | dict2items }}"
+
+  - name: converting list to map 
+    vars: 
+      self_intro:
+       - {"key": "my_name","value":"chinni"}
+       - {"key": "address","value":"hyd"}
+       - {"key": "age","value":"25"}
+    ansible.builtin.debug:
+     msg: "{{ self_intro | items2dict }}"
+  
