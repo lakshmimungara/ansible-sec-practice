@@ -1,0 +1,23 @@
+- name: datatypes 
+  hosts: local 
+  connection: local 
+  vars:
+    my_name: "maha lakshmi"
+    age: 25 
+    courses:
+    - java 
+    - sql 
+    - selenium
+    - testNG
+    - devops 
+    live: true 
+    tools:
+     CM: ansible 
+     CI: jenkins
+     CD: docker 
+  tasks:
+  - name: print the name and age of the user
+    ansible.builtin.debug:
+      msg: "Hi, my name is {{ my_name }} of age {{ age }},  I am learning these courses {{ courses }} and some tools {{ tools }} "
+  
+  
