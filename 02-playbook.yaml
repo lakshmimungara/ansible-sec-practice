@@ -3,4 +3,4 @@
   tasks:
   - name: my first playbook 
     ansible.builtin.debug:  # by default "hello world"
-    
+      msg: "Hello vijay! How is everything going on?"
