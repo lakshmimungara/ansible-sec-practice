@@ -5,7 +5,7 @@
     address: "Hyd"
   tasks:
   - name: display name and address   # variables represented by {{}}
-    ansible.buitlin.debug:
-     msg: "Hi, I am {{ name }} and I am currently living in {{ address }}"
+    ansible.builtin.debug:
+      msg: "Hi, I am {{ name }} and I am currently living in {{ address }}"
     
 
