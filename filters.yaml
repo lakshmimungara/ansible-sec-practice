@@ -1,0 +1,7 @@
+- name: filters/functions 
+  hosts: local 
+  connection: local 
+  tasks: 
+  - name: print the default variables 
+    ansible.builtin.debug:
+      msg: "Hello {{ my_name | default('chinni') }}"   # here my_name is not defined earlier 
