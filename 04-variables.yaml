@@ -4,8 +4,18 @@
     my_name: "maha lakshmi"
     address: "Hyd"
   tasks:
-  - name: display name and address   # variables represented by {{}}
+  - name: display name and address - task-1   # variables represented by {{}}
     ansible.builtin.debug:
       msg: "Hi, I am {{ my_name }} and I am currently living in {{ address }}"
     
+  - name: display name and address- task-2   # variables represented by {{}}
+    ansible.builtin.debug:
+    vars:
+    my_name: "vijay"
+      msg: "Hi, I am {{ my_name }} and I am currently living in {{ address }}"
 
+  - name: display name and address - task-3   # variables represented by {{}}
+    ansible.builtin.debug:
+      msg: "Hi, I am {{ my_name }} and I am currently living in {{ address }}"
+    
+    
