@@ -5,3 +5,16 @@
   - name: print the default variables 
     ansible.builtin.debug:
       msg: "Hello {{ my_name | default('chinni') }}"   # here my_name is not defined earlier 
+
+
+  - name: convert the string into uppercase 
+    vars: 
+      my_name: "chinni"
+    ansible.builtin.debug:
+     msg: "{{ my_name | upper }}"
+
+  - name: convert the string into lowercase 
+    vars: 
+      my_name: "MAHA"
+    ansible.builtin.debug:
+     msg: "{{ my_name | lower }}"
