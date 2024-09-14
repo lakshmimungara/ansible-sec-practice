@@ -2,9 +2,11 @@
   hosts: web 
   vars_prompt:
   - name: my_name
-    prompt: "enter your name: "
+    prompt: "enter your name"
+    private: false
   - name: address
-    prompt: "enter your address: "
+    prompt: "enter your address"
+    private: false  # not a confidential
   tasks: 
   - name: display variables from prompt 
     ansible.builtin.debug:
