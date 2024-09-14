@@ -23,4 +23,4 @@
     vars: 
       numbers: [17,45,7,8,234,17,45,7,8,234,5,56,6,7,23,234]
     ansible.builtin.debug:
-     msg: "{{ my_name | unique }}"
+     msg: "{{ numbers | unique }}"
