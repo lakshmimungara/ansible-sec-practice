@@ -1,0 +1,14 @@
+- name: iterating the items
+  hosts: local 
+  connection: local 
+  tasks: 
+  - name: iterate over the items
+    ansible.builtin.debug:
+      msg: "{{ item }}"
+    loop:
+    - lakshmi 
+    - maha 
+    - mkml
+    - kml 
+    - chinni 
+    
