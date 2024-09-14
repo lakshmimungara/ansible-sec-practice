@@ -1,14 +1,26 @@
-- name: iterating the items
-  hosts: local 
-  connection: local 
+# - name: iterating the items
+#   hosts: local 
+#   connection: local 
+#   tasks: 
+#   - name: iterate over the items
+#     ansible.builtin.debug:
+#       msg: "{{ item }}"
+#     loop:
+#     - lakshmi 
+#     - maha 
+#     - mkml
+#     - kml 
+#     - chinni 
+    
+
+- name: installing packages
+  hosts: web
+  become: yes 
   tasks: 
-  - name: iterate over the items
-    ansible.builtin.debug:
+  - name: installing packages
+    ansible.builtin.package:
       msg: "{{ item }}"
     loop:
-    - lakshmi 
-    - maha 
-    - mkml
-    - kml 
-    - chinni 
-    
+    - mysql 
+    - git 
+    - nginx 
