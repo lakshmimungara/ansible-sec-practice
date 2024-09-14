@@ -51,6 +51,6 @@
   
   - name: checking IP address
     vars: 
-      ip: "392.168.1.2"
+      ip: "192.168.1.2"   # if we given public ip it gives you false 
     ansible.builtin.debug:
      msg: "{{ ip | ansible.utils.ipv4 }}"
