@@ -49,3 +49,8 @@
     ansible.builtin.debug:
      msg: "{{ self_intro | items2dict }}"
   
+  - name: checking IP address
+    vars: 
+      ip: "192.168.1.2"
+    ansible.builtin.debug:
+     msg: "{{ ip | ansible.utils.ipv4 }}"
