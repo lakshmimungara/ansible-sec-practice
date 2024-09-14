@@ -4,3 +4,11 @@
   - name: my first playbook 
     ansible.builtin.debug:  # by default "hello world"
       msg: "Hello vijay! How is everything going on?"
+  
+
+- name: second playbook 
+  hosts: web 
+  tasks:
+  - name: my 2nd playbook 
+    ansible.builtin.debug:  # by default "hello world"
+      msg: "Hello MKML! How is everything going on?"
