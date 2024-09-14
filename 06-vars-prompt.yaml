@@ -1,0 +1,11 @@
+- name: variables fro prompt 
+  hosts: web 
+  vars_prompt:
+  - my_name: "maha lakshmi"
+    prompt: "enter your name: "
+  - address: "hyd"
+    prompt: "enter your address: "
+  tasks: 
+  - name: display variables from prompt 
+    ansible.builtin.debug:
+      msg: "Hi, my name is {{ my_name }} and living in {{ address }}"
