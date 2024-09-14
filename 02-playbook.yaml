@@ -1,0 +1,6 @@
+- name: first playbook 
+  hosts: web 
+  tasks:
+  - name: my first playbook 
+    ansible.builtin.debug:  # by default "hello world"
+    
