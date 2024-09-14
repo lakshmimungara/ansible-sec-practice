@@ -1,11 +1,11 @@
 - name: variables 
   hosts: web 
   vars:
-    name: "maha lakshmi"
+    my_name: "maha lakshmi"
     address: "Hyd"
   tasks:
   - name: display name and address   # variables represented by {{}}
     ansible.builtin.debug:
-      msg: "Hi, I am {{ name }} and I am currently living in {{ address }}"
+      msg: "Hi, I am {{ my_name }} and I am currently living in {{ address }}"
     
 
