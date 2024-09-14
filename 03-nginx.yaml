@@ -1,7 +1,14 @@
 - name: nginx installation
   hosts: web 
+  become: yes   # either become: yes or else we can use -b in the command
   tasks:
   - name: installing nginx 
     ansible.builtin.package:
       name: nginx 
       state: present
+
+  - name: starting and enabling the nginx 
+    ansible.builtin.service:
+      name: nginx 
+      state: started
+      enabled: yes
