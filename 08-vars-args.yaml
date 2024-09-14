@@ -1,0 +1,6 @@
+- name: variables from args
+  hosts: web 
+  tasks:
+  - name: variables from args
+    ansible.builtin.debug:
+       msg: "Hi, my name is {{ my_name }} and I am living in {{ address }}"
